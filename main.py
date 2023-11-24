@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException, Depends
 from fastapi.responses import RedirectResponse
 from pydantic import BaseModel
-from google_auth_oauthlib.flow import InstalledAppFlow
+from google_auth_oauthlib.flow import InstalledAppFlowid
 from google.auth.transport.requests import Request
 from googleapiclient.discovery import build
 import os
@@ -9,7 +9,7 @@ import os
 app = FastAPI()
 
 # 这是您的OAuth 2.0客户端配置文件路径
-CLIENT_SECRETS_FILE = 'path/to/your/client_secret.json'
+CLIENT_SECRETS_FILE = 'client_id.json'
 
 # 定义所需的API权限范围
 SCOPES = ['https://www.googleapis.com/auth/drive.readonly']
